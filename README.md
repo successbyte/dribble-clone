@@ -1,4 +1,4 @@
-# Dribble-clone
+# Dribbble-clone
 
 ## Live host
 
