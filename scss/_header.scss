@@ -1,0 +1,69 @@
+@import "../scss/variables";
+@import "../scss/media";
+
+/* Header Section Strarted */
+.header {
+  width: 100%;
+  height: 68px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: $white--color;
+
+  @include medium-920 {
+    height: 80px;
+  }
+
+  &__menu-div {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 24px;
+    cursor: pointer;
+
+    @include medium-920 {
+      display: none;
+    }
+
+    &--svg {
+      fill: $menu--sign-in--icons-and-header-links--color;
+      font-weight: 400;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__dribbble-div {
+    cursor: pointer;
+    margin-right: -36px;
+
+    @include medium-920 {
+      margin-left: 24px;
+      margin-right: 0;
+    }
+
+    &:hover {
+      @include medium-920 {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__sign-in-div {
+    margin-right: 35px;
+
+    &--a {
+      text-decoration: none;
+      color: $header-sign-in-text-search-icon-color;
+      font-weight: 400;
+    }
+  }
+}
+
+body {
+  background-color: hotpink;
+  height: 150vh;
+}

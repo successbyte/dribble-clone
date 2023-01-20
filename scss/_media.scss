@@ -1,0 +1,5 @@
+@mixin medium-920 {
+  @media (min-width: 57.5em) {
+    @content;
+  }
+}
