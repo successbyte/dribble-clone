@@ -109,11 +109,45 @@ h6 {
       .header__dribbble-div:hover {
         opacity: 0.6; } }
   .header__sign-in-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-right: 35px; }
-    .header__sign-in-div--a {
+    @media (min-width: 57.5em) {
+      .header__sign-in-div {
+        margin-right: 24px; } }
+    .header__sign-in-div--sign-in {
       text-decoration: none;
       color: #6e6d7a;
       font-weight: 400; }
+      @media (min-width: 57.5em) {
+        .header__sign-in-div--sign-in {
+          margin-right: 3px; } }
+    .header__sign-in-div--sign-up {
+      text-decoration: none;
+      color: #6e6d7a;
+      font-weight: 400;
+      font-family: inherit;
+      color: #ffffff;
+      background-color: #ea4c89;
+      padding: 11px 16px;
+      border-radius: 8px;
+      font-size: 15px;
+      margin-left: 18px;
+      transition: background-color 100ms ease;
+      display: none; }
+      @media (min-width: 57.5em) {
+        .header__sign-in-div--sign-up {
+          display: inline-block; } }
+      .header__sign-in-div--sign-up:hover {
+        background-color: #ec82ac; }
+    .header__sign-in-div--svg {
+      fill: #9e9ea7;
+      width: 18px;
+      height: 18px;
+      margin-right: 23px;
+      margin-bottom: -4px;
+      cursor: pointer; }
 
 body {
   background-color: hotpink;

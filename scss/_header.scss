@@ -53,12 +53,54 @@
   }
 
   &__sign-in-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-right: 35px;
 
-    &--a {
+    @include medium-920 {
+      margin-right: 24px;
+    }
+
+    &--sign-in {
       text-decoration: none;
       color: $header-sign-in-text-search-icon-color;
       font-weight: 400;
+
+      @include medium-920 {
+        margin-right: 3px;
+      }
+    }
+
+    &--sign-up {
+      text-decoration: none;
+      color: $header-sign-in-text-search-icon-color;
+      font-weight: 400;
+      font-family: inherit;
+      color: $white--color;
+      background-color: $sign-up--button--color;
+      padding: 11px 16px;
+      border-radius: 8px;
+      font-size: 15px;
+      margin-left: 18px;
+      transition: background-color 100ms ease;
+      display: none;
+
+      @include medium-920 {
+        display: inline-block;
+      }
+
+      &:hover {
+        background-color: $sign-ip--button-hover--color;
+      }
+    }
+    &--svg {
+      fill: $menu--sign-in--icons-and-header-links--color;
+      width: 18px;
+      height: 18px;
+      margin-right: 23px;
+      margin-bottom: -4px;
+      cursor: pointer;
     }
   }
 }
