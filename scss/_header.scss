@@ -11,6 +11,11 @@
   justify-content: space-between;
   overflow: hidden;
   background-color: $white--color;
+  z-index: 1;
+
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 
   @include medium-920 {
     height: 80px;
@@ -37,17 +42,47 @@
   }
 
   &__dribbble-div {
-    cursor: pointer;
     margin-right: -36px;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-grow: 0;
 
     @include medium-920 {
       margin-left: 24px;
       margin-right: 0;
     }
 
-    &:hover {
+    &--svg:hover {
+      cursor: pointer;
       @include medium-920 {
         opacity: 0.6;
+      }
+    }
+
+    &--links {
+      display: none;
+      flex-direction: row;
+      gap: 12px;
+      list-style: none;
+      margin-right: auto;
+      margin-left: 22px;
+      padding-left: 0;
+      font-size: 15px;
+      color: $header-sign-in-text-search-icon-color;
+
+      @include medium-920 {
+        display: flex;
+      }
+
+      li {
+        font-weight: 400;
+        cursor: pointer;
+        font-family: inherit;
+
+        &:hover {
+          color: $drible-icon-and--header-links-hover--color;
+        }
       }
     }
   }
@@ -101,6 +136,11 @@
       margin-right: 23px;
       margin-bottom: -4px;
       cursor: pointer;
+      display: none;
+
+      @include medium-920 {
+        display: inline-block;
+      }
     }
   }
 }

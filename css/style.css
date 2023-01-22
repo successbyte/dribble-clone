@@ -69,6 +69,15 @@ h6 {
 #__next {
   isolation: isolate; }
 
+::-moz-selection {
+  /* Code for Firefox */
+  color: #f9e3ee;
+  background: #e84c89; }
+
+::selection {
+  color: #f9e3ee;
+  background: #e84c89; }
+
 /* CSS Reset Ends */
 /* Header Section Strarted */
 .header {
@@ -79,7 +88,14 @@ h6 {
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  z-index: 1;
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */ }
   @media (min-width: 57.5em) {
     .header {
       height: 80px; } }
@@ -99,15 +115,39 @@ h6 {
       width: 18px;
       height: 18px; }
   .header__dribbble-div {
-    cursor: pointer;
-    margin-right: -36px; }
+    margin-right: -36px;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-grow: 0; }
     @media (min-width: 57.5em) {
       .header__dribbble-div {
         margin-left: 24px;
         margin-right: 0; } }
-    @media (min-width: 57.5em) {
-      .header__dribbble-div:hover {
-        opacity: 0.6; } }
+    .header__dribbble-div--svg:hover {
+      cursor: pointer; }
+      @media (min-width: 57.5em) {
+        .header__dribbble-div--svg:hover {
+          opacity: 0.6; } }
+    .header__dribbble-div--links {
+      display: none;
+      flex-direction: row;
+      gap: 12px;
+      list-style: none;
+      margin-right: auto;
+      margin-left: 22px;
+      padding-left: 0;
+      font-size: 15px;
+      color: #6e6d7a; }
+      @media (min-width: 57.5em) {
+        .header__dribbble-div--links {
+          display: flex; } }
+      .header__dribbble-div--links li {
+        font-weight: 400;
+        cursor: pointer;
+        font-family: inherit; }
+        .header__dribbble-div--links li:hover {
+          color: #0d0c22; }
   .header__sign-in-div {
     display: flex;
     flex-direction: row;
@@ -147,7 +187,11 @@ h6 {
       height: 18px;
       margin-right: 23px;
       margin-bottom: -4px;
-      cursor: pointer; }
+      cursor: pointer;
+      display: none; }
+      @media (min-width: 57.5em) {
+        .header__sign-in-div--svg {
+          display: inline-block; } }
 
 body {
   background-color: hotpink;

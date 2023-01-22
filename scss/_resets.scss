@@ -1,3 +1,4 @@
+@import "./variables";
 /* CSS Reset Starts */
 
 /*
@@ -76,6 +77,18 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+//  Text selection color
+::-moz-selection {
+  /* Code for Firefox */
+  color: $selected-text-color;
+  background: $selected-text-background-color;
+}
+
+::selection {
+  color: $selected-text-color;
+  background: $selected-text-background-color;
 }
 
 /* CSS Reset Ends */
