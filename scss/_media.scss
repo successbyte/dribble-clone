@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin medium-1200 {
+  @media (min-width: 75em) {
+    @content;
+  }
+}

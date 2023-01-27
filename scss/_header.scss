@@ -9,9 +9,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
+  // overflow: hidden;
   background-color: $white--color;
+
   z-index: 1;
+  position: fixed;
 
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
@@ -19,6 +21,7 @@
 
   @include medium-920 {
     height: 80px;
+    position: relative;
   }
 
   &__menu-div {
@@ -43,10 +46,12 @@
 
   &__dribbble-div {
     margin-right: -36px;
+    align-self: stretch;
     display: flex;
     align-items: center;
     gap: 0;
     flex-grow: 0;
+    flex-shrink: 0;
 
     @include medium-920 {
       margin-left: 24px;
@@ -63,6 +68,8 @@
     &--links {
       display: none;
       flex-direction: row;
+      align-items: stretch;
+      align-self: stretch;
       gap: 12px;
       list-style: none;
       margin-right: auto;
@@ -76,12 +83,74 @@
       }
 
       li {
-        font-weight: 400;
-        cursor: pointer;
+        font-weight: 500;
         font-family: inherit;
 
         &:hover {
           color: $drible-icon-and--header-links-hover--color;
+        }
+
+        @include medium-1200 {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+
+      &--parent {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .header__dribbble-div--links--link {
+          font-size: inherit;
+          font-weight: inherit;
+          font-family: inherit;
+          text-decoration: none;
+          color: inherit;
+        }
+
+        &__div {
+          visibility: hidden;
+          position: absolute;
+          background-color: aqua;
+          color: $drible-icon-and--header-links-hover--color;
+          text-align: center;
+          // top: 38px;
+          top: 85%;
+          left: -32px;
+          border-radius: 12px;
+          /* Position the tooltip text - see examples below! */
+          z-index: 1;
+        }
+
+        &:hover .header__dribbble-div--links--parent__div {
+          visibility: visible;
+        }
+
+        .inspiration__div {
+          width: 600px;
+          height: 390px;
+        }
+
+        .find-work__div {
+          width: 400px;
+          height: 327px;
+        }
+
+        .learn-design__div {
+          width: 400px;
+          height: 430px;
+        }
+
+        .go-pro__div {
+          width: 400px;
+          height: 242px;
+        }
+
+        .hire-designers__div {
+          width: 400px;
+          height: 242px;
         }
       }
     }
@@ -145,7 +214,7 @@
   }
 }
 
-body {
+.test-div {
   background-color: hotpink;
   height: 150vh;
 }

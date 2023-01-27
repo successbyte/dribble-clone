@@ -87,9 +87,9 @@ h6 {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
   background-color: #ffffff;
   z-index: 1;
+  position: fixed;
   -webkit-user-select: none;
   /* Safari */
   -ms-user-select: none;
@@ -98,7 +98,8 @@ h6 {
   /* Standard syntax */ }
   @media (min-width: 57.5em) {
     .header {
-      height: 80px; } }
+      height: 80px;
+      position: relative; } }
   .header__menu-div {
     align-self: stretch;
     display: flex;
@@ -116,10 +117,12 @@ h6 {
       height: 18px; }
   .header__dribbble-div {
     margin-right: -36px;
+    align-self: stretch;
     display: flex;
     align-items: center;
     gap: 0;
-    flex-grow: 0; }
+    flex-grow: 0;
+    flex-shrink: 0; }
     @media (min-width: 57.5em) {
       .header__dribbble-div {
         margin-left: 24px;
@@ -132,6 +135,8 @@ h6 {
     .header__dribbble-div--links {
       display: none;
       flex-direction: row;
+      align-items: stretch;
+      align-self: stretch;
       gap: 12px;
       list-style: none;
       margin-right: auto;
@@ -143,11 +148,53 @@ h6 {
         .header__dribbble-div--links {
           display: flex; } }
       .header__dribbble-div--links li {
-        font-weight: 400;
-        cursor: pointer;
+        font-weight: 500;
         font-family: inherit; }
         .header__dribbble-div--links li:hover {
           color: #0d0c22; }
+        @media (min-width: 75em) {
+          .header__dribbble-div--links li {
+            padding-left: 10px;
+            padding-right: 10px; } }
+      .header__dribbble-div--links--parent {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .header__dribbble-div--links--parent .header__dribbble-div--links--link {
+          font-size: inherit;
+          font-weight: inherit;
+          font-family: inherit;
+          text-decoration: none;
+          color: inherit; }
+        .header__dribbble-div--links--parent__div {
+          visibility: hidden;
+          position: absolute;
+          background-color: aqua;
+          color: #0d0c22;
+          text-align: center;
+          top: 85%;
+          left: -32px;
+          border-radius: 12px;
+          /* Position the tooltip text - see examples below! */
+          z-index: 1; }
+        .header__dribbble-div--links--parent:hover .header__dribbble-div--links--parent__div {
+          visibility: visible; }
+        .header__dribbble-div--links--parent .inspiration__div {
+          width: 600px;
+          height: 390px; }
+        .header__dribbble-div--links--parent .find-work__div {
+          width: 400px;
+          height: 327px; }
+        .header__dribbble-div--links--parent .learn-design__div {
+          width: 400px;
+          height: 430px; }
+        .header__dribbble-div--links--parent .go-pro__div {
+          width: 400px;
+          height: 242px; }
+        .header__dribbble-div--links--parent .hire-designers__div {
+          width: 400px;
+          height: 242px; }
   .header__sign-in-div {
     display: flex;
     flex-direction: row;
@@ -193,6 +240,6 @@ h6 {
         .header__sign-in-div--svg {
           display: inline-block; } }
 
-body {
+.test-div {
   background-color: hotpink;
   height: 150vh; }
