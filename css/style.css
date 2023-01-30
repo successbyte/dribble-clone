@@ -168,21 +168,131 @@ h6 {
           text-decoration: none;
           color: inherit; }
         .header__dribbble-div--links--parent__div {
+          display: flex;
+          align-items: stretch;
           visibility: hidden;
+          opacity: 0;
           position: absolute;
-          background-color: aqua;
           color: #0d0c22;
           text-align: center;
           top: 85%;
           left: -32px;
           border-radius: 12px;
+          overflow: hidden;
           /* Position the tooltip text - see examples below! */
-          z-index: 1; }
+          z-index: 1;
+          box-shadow: 0px 10px 70px #00000026;
+          transition: visibility 200ms linear, opacity 150ms linear; }
         .header__dribbble-div--links--parent:hover .header__dribbble-div--links--parent__div {
-          visibility: visible; }
+          visibility: visible;
+          opacity: 1; }
+        .header__dribbble-div--links--parent .lists-parent {
+          background-color: #ffffff;
+          padding: 16px 0;
+          display: flex;
+          flex-direction: column;
+          align-items: stretch; }
+          .header__dribbble-div--links--parent .lists-parent .list {
+            height: auto;
+            width: 100%;
+            list-style: none;
+            vertical-align: baseline;
+            display: list-item;
+            padding: 0;
+            line-height: 20px; }
+            .header__dribbble-div--links--parent .lists-parent .list .list--link {
+              display: flex;
+              align-items: center;
+              margin: 0 22px;
+              padding: 15px 18px;
+              border-radius: 12px;
+              text-decoration: none; }
+              .header__dribbble-div--links--parent .lists-parent .list .list--link .left--svg {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 36px;
+                height: 36px;
+                margin-right: 16px;
+                border-radius: 6px;
+                transition: background-color 200ms ease;
+                background: #f8f8f8; }
+                .header__dribbble-div--links--parent .lists-parent .list .list--link .left--svg .header__link--svg {
+                  width: 20px;
+                  height: 20px; }
+              .header__dribbble-div--links--parent .lists-parent .list .list--link .middle__text--div {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                max-width: 75%;
+                overflow: hidden; }
+                .header__dribbble-div--links--parent .lists-parent .list .list--link .middle__text--div .middle__text--div--top-text {
+                  display: flex;
+                  align-items: center;
+                  font-size: 14px;
+                  font-weight: 500;
+                  color: #0d0c22; }
+                .header__dribbble-div--links--parent .lists-parent .list .list--link .middle__text--div .middle__text--div--bottom-text {
+                  margin-top: 4px;
+                  color: #6e6d7a;
+                  word-break: break-word;
+                  font-size: 12px;
+                  font-weight: 400;
+                  line-height: 16px; }
+              .header__dribbble-div--links--parent .lists-parent .list .list--link .right__svg-div {
+                margin-left: auto; }
+                .header__dribbble-div--links--parent .lists-parent .list .list--link .right__svg-div--svg {
+                  width: 12px;
+                  height: 12px;
+                  opacity: 0;
+                  margin-right: 8px;
+                  transition: transform 200ms ease-in, opacity 200ms ease-in; }
+            .header__dribbble-div--links--parent .lists-parent .list:hover .right__svg-div--svg {
+              transform: translateX(4px);
+              opacity: 1; }
         .header__dribbble-div--links--parent .inspiration__div {
           width: 600px;
-          height: 390px; }
+          height: 390px;
+          display: flex;
+          align-items: stretch;
+          visibility: visible;
+          opacity: 1; }
+          .header__dribbble-div--links--parent .inspiration__div .inspiration__div--left {
+            width: 400px; }
+            .header__dribbble-div--links--parent .inspiration__div .inspiration__div--left .explore--icon {
+              color: #724e91; }
+            .header__dribbble-div--links--parent .inspiration__div .inspiration__div--left .inspiration__div--left--explore:hover .explore__svg {
+              background-color: rgba(114, 78, 145, 0.1); }
+            .header__dribbble-div--links--parent .inspiration__div .inspiration__div--left .explore__right__svg-div {
+              fill: #724e91; }
+            .header__dribbble-div--links--parent .inspiration__div .inspiration__div--left .new--icon {
+              color: #e54f6d; }
+            .header__dribbble-div--links--parent .inspiration__div .inspiration__div--left .inspiration__div--left--new:hover .new__svg {
+              background-color: rgba(229, 79, 109, 0.1); }
+            .header__dribbble-div--links--parent .inspiration__div .inspiration__div--left .new__right__svg-div {
+              fill: #e54f6d; }
+            .header__dribbble-div--links--parent .inspiration__div .inspiration__div--left .playoffs--icon {
+              color: #74c4ba; }
+            .header__dribbble-div--links--parent .inspiration__div .inspiration__div--left .inspiration__div--left--playoffs:hover .playoffs__svg {
+              background-color: rgba(116, 196, 186, 0.1); }
+            .header__dribbble-div--links--parent .inspiration__div .inspiration__div--left .playoffs__right__svg-div {
+              fill: #74c4ba; }
+            .header__dribbble-div--links--parent .inspiration__div .inspiration__div--left .blog--icon {
+              color: #f8c630; }
+            .header__dribbble-div--links--parent .inspiration__div .inspiration__div--left .inspiration__div--left--blog:hover .blog__svg {
+              background-color: rgba(248, 198, 48, 0.1); }
+            .header__dribbble-div--links--parent .inspiration__div .inspiration__div--left .blog__right__svg-div {
+              fill: #f8c630; }
+            .header__dribbble-div--links--parent .inspiration__div .inspiration__div--left .weekly--icon {
+              color: #724e91; }
+            .header__dribbble-div--links--parent .inspiration__div .inspiration__div--left .inspiration__div--left--weekly:hover .weekly__svg {
+              background-color: rgba(114, 78, 145, 0.1); }
+            .header__dribbble-div--links--parent .inspiration__div .inspiration__div--left .weekly__right__svg-div {
+              fill: #724e91; }
+          .header__dribbble-div--links--parent .inspiration__div .inspiration__div--right {
+            width: 200px;
+            background-color: #f8f8f8;
+            padding: 24px 0; }
         .header__dribbble-div--links--parent .find-work__div {
           width: 400px;
           height: 327px; }
@@ -241,5 +351,4 @@ h6 {
           display: inline-block; } }
 
 .test-div {
-  background-color: hotpink;
   height: 150vh; }

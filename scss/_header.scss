@@ -111,26 +111,191 @@
         }
 
         &__div {
+          display: flex;
+          align-items: stretch;
           visibility: hidden;
+          opacity: 0;
           position: absolute;
-          background-color: aqua;
+          // background-color: aqua;
           color: $drible-icon-and--header-links-hover--color;
           text-align: center;
           // top: 38px;
           top: 85%;
           left: -32px;
           border-radius: 12px;
+          overflow: hidden;
           /* Position the tooltip text - see examples below! */
           z-index: 1;
+
+          // shadow
+          box-shadow: 0px 10px 70px #00000026;
+          transition: visibility 200ms linear, opacity 150ms linear;
         }
 
         &:hover .header__dribbble-div--links--parent__div {
           visibility: visible;
+          opacity: 1;
+        }
+
+        .lists-parent {
+          background-color: $white--color;
+          // background-color: brown;
+          padding: 16px 0;
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          .list {
+            // background-color: aquamarine;
+            height: auto;
+            width: 100%;
+            list-style: none;
+            vertical-align: baseline;
+            display: list-item;
+            padding: 0;
+            line-height: 20px;
+            .list--link {
+              display: flex;
+              align-items: center;
+              margin: 0 22px;
+              padding: 15px 18px;
+              // background-color: coral;
+              border-radius: 12px;
+              text-decoration: none;
+
+              .left--svg {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 36px;
+                height: 36px;
+                margin-right: 16px;
+                border-radius: 6px;
+                transition: background-color 200ms ease;
+                background: $header--svg--div--color;
+
+                .header__link--svg {
+                  width: 20px;
+                  height: 20px;
+                }
+              }
+
+              .middle__text--div {
+                // background-color: chartreuse;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                max-width: 75%;
+                overflow: hidden;
+
+                .middle__text--div--top-text {
+                  display: flex;
+                  align-items: center;
+                  font-size: 14px;
+                  font-weight: 500;
+                  color: $middle-text-div--top-text-color;
+                }
+                .middle__text--div--bottom-text {
+                  margin-top: 4px;
+                  color: $middle-text-div--bottom-text--color;
+                  word-break: break-word;
+                  font-size: 12px;
+                  font-weight: 400;
+                  line-height: 16px;
+                }
+              }
+
+              .right__svg-div {
+                margin-left: auto;
+                &--svg {
+                  width: 12px;
+                  height: 12px;
+                  opacity: 0;
+                  margin-right: 8px;
+                  transition: transform 200ms ease-in, opacity 200ms ease-in;
+                }
+              }
+            }
+
+            &:hover .right__svg-div--svg {
+              transform: translateX(4px);
+              opacity: 1;
+            }
+          }
         }
 
         .inspiration__div {
           width: 600px;
           height: 390px;
+          display: flex;
+          align-items: stretch;
+          visibility: visible;
+          opacity: 1;
+
+          .inspiration__div--left {
+            width: 400px;
+
+            // explore section
+            .explore--icon {
+              color: $purple--svg--color;
+            }
+
+            .inspiration__div--left--explore:hover .explore__svg {
+              background-color: $header--svg--div--purple-hover--color;
+            }
+
+            .explore__right__svg-div {
+              fill: $purple--svg--color;
+            }
+
+            // new section
+            .new--icon {
+              color: $red--svg--color;
+            }
+            .inspiration__div--left--new:hover .new__svg {
+              background-color: $header--svg--div--red-hover--color;
+            }
+            .new__right__svg-div {
+              fill: $red--svg--color;
+            }
+
+            //playoffs
+            .playoffs--icon {
+              color: $green--svg--color;
+            }
+            .inspiration__div--left--playoffs:hover .playoffs__svg {
+              background-color: $header--svg--div--green-hover--color;
+            }
+            .playoffs__right__svg-div {
+              fill: $green--svg--color;
+            }
+
+            //blog
+            .blog--icon {
+              color: $yellow--svg--color;
+            }
+            .inspiration__div--left--blog:hover .blog__svg {
+              background-color: $header--svg--div--yellow-hover--color;
+            }
+            .blog__right__svg-div {
+              fill: $yellow--svg--color;
+            }
+
+            //weekly warm-up
+            .weekly--icon {
+              color: $purple--svg--color;
+            }
+            .inspiration__div--left--weekly:hover .weekly__svg {
+              background-color: $header--svg--div--purple-hover--color;
+            }
+            .weekly__right__svg-div {
+              fill: $purple--svg--color;
+            }
+          }
+          .inspiration__div--right {
+            width: 200px;
+            background-color: $inspiration__div--right--color;
+            padding: 24px 0;
+          }
         }
 
         .find-work__div {
@@ -215,6 +380,6 @@
 }
 
 .test-div {
-  background-color: hotpink;
+  // background-color: hotpink;
   height: 150vh;
 }
