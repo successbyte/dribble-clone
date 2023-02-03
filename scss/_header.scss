@@ -110,6 +110,21 @@
           color: inherit;
         }
 
+        .hr__li {
+          padding-right: 32px;
+          padding-left: 32px;
+          list-style: none;
+
+          hr {
+            display: block;
+            height: 1px;
+            border: 0;
+            background: $header-background-color;
+            margin-block-start: 0.5em;
+            margin-block-end: 0.5em;
+          }
+        }
+
         &__div {
           display: flex;
           align-items: stretch;
@@ -144,6 +159,7 @@
           display: flex;
           flex-direction: column;
           align-items: stretch;
+          width: 100%;
           .list {
             // background-color: aquamarine;
             height: auto;
@@ -180,7 +196,6 @@
               }
 
               .middle__text--div {
-                // background-color: chartreuse;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -190,11 +205,16 @@
                 .middle__text--div--top-text {
                   display: flex;
                   align-items: center;
-                  font-size: 14px;
+                  justify-content: flex-start;
+                  font-size: 15px;
                   font-weight: 500;
                   color: $middle-text-div--top-text-color;
                 }
                 .middle__text--div--bottom-text {
+                  display: flex;
+                  align-items: center;
+                  justify-content: flex-start;
+                  text-align: left;
                   margin-top: 4px;
                   color: $middle-text-div--bottom-text--color;
                   word-break: break-word;
@@ -228,8 +248,8 @@
           height: 390px;
           display: flex;
           align-items: stretch;
-          visibility: visible;
-          opacity: 1;
+          visibility: hidden;
+          opacity: 0;
 
           .inspiration__div--left {
             width: 400px;
@@ -295,27 +315,234 @@
             width: 200px;
             background-color: $inspiration__div--right--color;
             padding: 24px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-around;
+            overflow: hidden;
+
+            list-style: none;
+
+            //
+            .browse {
+              text-align: start;
+              color: $middle-text-div--top-text-color;
+              font-size: 15px;
+              font-weight: 500;
+              padding-left: 36px;
+            }
+            .pointer-curser {
+              width: 100%;
+              cursor: pointer;
+            }
+            &--links {
+              padding: 0;
+              margin: 0;
+              a {
+                padding: 9px 36px;
+                font-size: 100%;
+                text-align: start;
+                display: block;
+                transition: color 200ms ease;
+                margin: 0;
+                text-decoration: none;
+                color: $middle-text-div--bottom-text--color;
+                font-weight: 400;
+              }
+
+              &:hover a {
+                color: $middle-text-div--top-text-color;
+              }
+            }
           }
         }
 
         .find-work__div {
           width: 400px;
           height: 327px;
+
+          //job board
+          .job--icon {
+            color: $purple--svg--color;
+          }
+          .inspiration__div--left--job:hover .job__svg {
+            background-color: $header--svg--div--purple-hover--color;
+          }
+          .job__right__svg-div {
+            fill: $purple--svg--color;
+          }
+
+          //freelance projects pro+
+          .freelance--icon {
+            color: $red--svg--color;
+          }
+          .inspiration__div--left--freelance:hover .freelance__svg {
+            background-color: $header--svg--div--red-hover--color;
+          }
+          .freelance__right__svg-div {
+            fill: $red--svg--color;
+          }
+
+          // red background text in find work hover section
+          .red__text {
+            margin-left: 8px;
+            background-color: $sign-up--button--color;
+            color: $white--color;
+            font-weight: 500;
+            font-size: 10px;
+            border-radius: 4px;
+            padding: 0 4px;
+            align-items: center;
+          }
+
+          //Want freelance design projects?
+          .want--icon {
+            color: $green--svg--color;
+          }
+          .inspiration__div--left--want:hover .want__svg {
+            background-color: $header--svg--div--green-hover--color;
+          }
+          .want__right__svg-div {
+            fill: $green--svg--color;
+          }
+
+          //Personalize your profile with video
+          .personalize--icon {
+            color: $yellow--svg--color;
+          }
+          .inspiration__div--left--personalize:hover .personalize__svg {
+            background-color: $header--svg--div--yellow-hover--color;
+          }
+          .personalize__right__svg-div {
+            fill: $yellow--svg--color;
+          }
         }
 
         .learn-design__div {
           width: 400px;
           height: 430px;
+
+          //Certified Product Design Course
+          .certified--icon {
+            color: $purple--svg--color;
+          }
+          .inspiration__div--left--certified:hover .certified__svg {
+            background-color: $header--svg--div--purple-hover--color;
+          }
+          .certified__right__svg-div {
+            fill: $purple--svg--color;
+          }
+
+          //Introduction to UI Design
+          .introduction--icon {
+            color: $purple--svg--color;
+          }
+          .inspiration__div--left--introduction:hover .introduction__svg {
+            background-color: $header--svg--div--red-hover--color;
+          }
+          .introduction__right__svg-div {
+            fill: $red--svg--color;
+          }
+
+          //Design Systems Course
+          .systems--icon {
+            color: $green--svg--color;
+          }
+          .inspiration__div--left--systems:hover .systems__svg {
+            background-color: $header--svg--div--green-hover--color;
+          }
+          .systems__right__svg-div {
+            fill: $green--svg--color;
+          }
+
+          //Design Career Prep Course
+          .career--icon {
+            color: $yellow--svg--color;
+          }
+          .inspiration__div--left--career:hover .career__svg {
+            background-color: $header--svg--div--yellow-hover--color;
+          }
+          .career__right__svg-div {
+            fill: $yellow--svg--color;
+          }
+
+          //Browse our courses & workshops
+          .browse--icon {
+            color: $purple--svg--color;
+          }
+          .inspiration__div--left--browse:hover .browse__svg {
+            background-color: $header--svg--div--purple-hover--color;
+          }
+          .browse__right__svg-div {
+            fill: $purple--svg--color;
+          }
         }
 
         .go-pro__div {
           width: 400px;
           height: 242px;
+
+          //for designers
+          .for-designers--icon {
+            color: $purple--svg--color;
+          }
+          .inspiration__div--left--for-designers:hover .for-designers__svg {
+            background-color: $header--svg--div--purple-hover--color;
+          }
+
+          //for freelancers
+          .for-freelancers--icon {
+            color: $red--svg--color;
+          }
+          .inspiration__div--left--for-freelancers:hover .for-freelancers__svg {
+            background-color: $header--svg--div--red-hover--color;
+          }
+
+          //for teams
+          .for-teams--icon {
+            color: $green--svg--color;
+          }
+          .inspiration__div--left--for-teams:hover .for-teams__svg {
+            background-color: $header--svg--div--green-hover--color;
+          }
         }
 
         .hire-designers__div {
           width: 400px;
           height: 242px;
+
+          //Designer Search
+          .designer--icon {
+            color: $purple--svg--color;
+          }
+          .inspiration__div--left--designer:hover .designer__svg {
+            background-color: $header--svg--div--purple-hover--color;
+          }
+          .designer__right__svg-div {
+            fill: $purple--svg--color;
+          }
+
+          //list my job opening
+          .opening--icon {
+            color: $red--svg--color;
+          }
+          .inspiration__div--left--opening:hover .opening__svg {
+            background-color: $header--svg--div--red-hover--color;
+          }
+          .opening__right__svg-div {
+            fill: $red--svg--color;
+          }
+
+          //post a freelance project
+          .post--icon {
+            color: $green--svg--color;
+          }
+          .inspiration__div--left--post:hover .post__svg {
+            background-color: $header--svg--div--green-hover--color;
+          }
+          .post__right__svg-div {
+            fill: $green--svg--color;
+          }
         }
       }
     }
