@@ -9,21 +9,24 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  // overflow: hidden;
   background-color: $white--color;
 
   z-index: 1;
   position: fixed;
 
+  // three lines
+  // for text not to be selectable
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 
+  // change the size of header in 920px size
   @include medium-920 {
     height: 80px;
     position: relative;
   }
 
+  // menu svg only for small/mobile size
   &__menu-div {
     align-self: stretch;
     display: flex;
@@ -44,6 +47,7 @@
     }
   }
 
+  // dribbble svg and the list of droppdowns
   &__dribbble-div {
     margin-right: -36px;
     align-self: stretch;
@@ -58,6 +62,7 @@
       margin-right: 0;
     }
 
+    // dribbble svg hover section
     &--svg:hover {
       cursor: pointer;
       @include medium-920 {
@@ -65,6 +70,7 @@
       }
     }
 
+    // Droppdown links in header
     &--links {
       display: none;
       flex-direction: row;
@@ -82,6 +88,7 @@
         display: flex;
       }
 
+      // droppdown links
       li {
         font-weight: 500;
         font-family: inherit;
@@ -96,12 +103,15 @@
         }
       }
 
+      // droppdown links
+      // relative and hoverable
       &--parent {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
 
+        // links text setup
         .header__dribbble-div--links--link {
           font-size: inherit;
           font-weight: inherit;
@@ -115,6 +125,7 @@
           padding-left: 32px;
           list-style: none;
 
+          // horizintal row in Inspiration droppdown
           hr {
             display: block;
             height: 1px;
@@ -125,16 +136,15 @@
           }
         }
 
+        // the main setup for dropdowns
         &__div {
           display: flex;
           align-items: stretch;
           visibility: hidden;
           opacity: 0;
           position: absolute;
-          // background-color: aqua;
           color: $drible-icon-and--header-links-hover--color;
           text-align: center;
-          // top: 38px;
           top: 85%;
           left: -32px;
           border-radius: 12px;
@@ -142,26 +152,28 @@
           /* Position the tooltip text - see examples below! */
           z-index: 1;
 
-          // shadow
+          // shadow for droppdowns
           box-shadow: 0px 10px 70px #00000026;
           transition: visibility 200ms linear, opacity 150ms linear;
         }
 
+        // droppdown visible when hover parent link
         &:hover .header__dribbble-div--links--parent__div {
           visibility: visible;
           opacity: 1;
         }
 
+        // droppdown list-links div main setup
         .lists-parent {
           background-color: $white--color;
-          // background-color: brown;
           padding: 16px 0;
           display: flex;
           flex-direction: column;
           align-items: stretch;
           width: 100%;
+
+          // droppdown list main setup
           .list {
-            // background-color: aquamarine;
             height: auto;
             width: 100%;
             list-style: none;
@@ -169,15 +181,17 @@
             display: list-item;
             padding: 0;
             line-height: 20px;
+
+            //links inside dropdown, main setup
             .list--link {
               display: flex;
               align-items: center;
               margin: 0 22px;
               padding: 15px 18px;
-              // background-color: coral;
               border-radius: 12px;
               text-decoration: none;
 
+              // the svg on left side of dropdowns main setup
               .left--svg {
                 display: flex;
                 align-items: center;
@@ -189,12 +203,14 @@
                 transition: background-color 200ms ease;
                 background: $header--svg--div--color;
 
+                // dropdown svg size
                 .header__link--svg {
                   width: 20px;
                   height: 20px;
                 }
               }
 
+              // text in dropdown between svgs main setup
               .middle__text--div {
                 display: flex;
                 flex-direction: column;
@@ -202,6 +218,7 @@
                 max-width: 75%;
                 overflow: hidden;
 
+                // droppdown links top text main setup
                 .middle__text--div--top-text {
                   display: flex;
                   align-items: center;
@@ -210,6 +227,8 @@
                   font-weight: 500;
                   color: $middle-text-div--top-text-color;
                 }
+
+                // droppdown links bottom text main setup
                 .middle__text--div--bottom-text {
                   display: flex;
                   align-items: center;
@@ -224,6 +243,7 @@
                 }
               }
 
+              // dropdown links right svgs main setup
               .right__svg-div {
                 margin-left: auto;
                 &--svg {
@@ -236,6 +256,7 @@
               }
             }
 
+            // dropdown links right svgs hover transform
             &:hover .right__svg-div--svg {
               transform: translateX(4px);
               opacity: 1;
@@ -243,6 +264,7 @@
           }
         }
 
+        //inspiration dropdown
         .inspiration__div {
           width: 600px;
           height: 390px;
@@ -251,6 +273,7 @@
           visibility: hidden;
           opacity: 0;
 
+          // inspiration left section
           .inspiration__div--left {
             width: 400px;
 
@@ -311,6 +334,8 @@
               fill: $purple--svg--color;
             }
           }
+
+          // inpiration dropdown right section
           .inspiration__div--right {
             width: 200px;
             background-color: $inspiration__div--right--color;
@@ -323,7 +348,7 @@
 
             list-style: none;
 
-            //
+            //inspiration right section header text
             .browse {
               text-align: start;
               color: $middle-text-div--top-text-color;
@@ -331,13 +356,19 @@
               font-weight: 500;
               padding-left: 36px;
             }
+
+            // inspiration right section links div
             .pointer-curser {
               width: 100%;
               cursor: pointer;
             }
+
+            // inspiration right list items
             &--links {
               padding: 0;
               margin: 0;
+
+              // inspiration right links setup
               a {
                 padding: 9px 36px;
                 font-size: 100%;
@@ -357,6 +388,7 @@
           }
         }
 
+        // header Find Work dropdown section
         .find-work__div {
           width: 400px;
           height: 327px;
@@ -418,6 +450,7 @@
           }
         }
 
+        // header Learn Design dropdown section
         .learn-design__div {
           width: 400px;
           height: 430px;
@@ -478,6 +511,7 @@
           }
         }
 
+        // header Go Pro dropdown section
         .go-pro__div {
           width: 400px;
           height: 242px;
@@ -507,6 +541,7 @@
           }
         }
 
+        // header Hire Designers dropdown section
         .hire-designers__div {
           width: 400px;
           height: 242px;
@@ -548,6 +583,7 @@
     }
   }
 
+  // header right sign up section
   &__sign-in-div {
     display: flex;
     flex-direction: row;
@@ -558,6 +594,7 @@
       margin-right: 24px;
     }
 
+    // header sign in link
     &--sign-in {
       text-decoration: none;
       color: $header-sign-in-text-search-icon-color;
@@ -568,6 +605,7 @@
       }
     }
 
+    // header sign up link button
     &--sign-up {
       text-decoration: none;
       color: $header-sign-in-text-search-icon-color;
@@ -590,6 +628,8 @@
         background-color: $sign-ip--button-hover--color;
       }
     }
+
+    // header search svg in right
     &--svg {
       fill: $menu--sign-in--icons-and-header-links--color;
       width: 18px;
