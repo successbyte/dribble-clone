@@ -1,4 +1,6 @@
 @import "./variables";
+@import "./media";
+
 /* CSS Reset Starts */
 
 /*
@@ -25,6 +27,7 @@ body {
   background-color: var(--body--background--color);
   height: 100%;
   font-family: Roboto, Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
 /*
@@ -34,6 +37,12 @@ body {
     */
 body {
   -webkit-font-smoothing: antialiased;
+  padding-top: 60px;
+  overflow-x: hidden;
+  line-height: 28px;
+  @include medium-920 {
+    padding-top: 0;
+  }
 }
 
 /*

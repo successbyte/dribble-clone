@@ -11,8 +11,9 @@
   justify-content: space-between;
   background-color: $white--color;
 
-  z-index: 1;
+  z-index: 10;
   position: fixed;
+  top: 0;
 
   // three lines
   // for text not to be selectable
@@ -644,9 +645,4 @@
       }
     }
   }
-}
-
-.test-div {
-  // background-color: hotpink;
-  height: 150vh;
 }

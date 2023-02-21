@@ -10,6 +10,12 @@
   }
 }
 
+@mixin medium-959 {
+  @media (max-width: 59.9375em) {
+    @content;
+  }
+}
+
 @mixin medium-1200 {
   @media (min-width: 75em) {
     @content;
