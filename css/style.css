@@ -532,6 +532,7 @@ h6 {
       font-weight: 400;
       scroll-behavior: smooth;
       list-style: none;
+      overflow-x: scroll;
       /* Hide scrollbar for Chrome, Safari and Opera */
       /* Hide scrollbar for IE, Edge and Firefox */ }
       .video-section__filter-buttons--list::-webkit-scrollbar {
