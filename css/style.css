@@ -469,18 +469,25 @@ h6 {
         .header__sign-in-div--sign-in {
           margin-right: 3px; } }
     .header__sign-in-div--sign-up {
+      position: relative;
+      box-sizing: border-box;
       text-decoration: none;
       color: #6e6d7a;
       font-weight: 400;
       font-family: inherit;
       color: #ffffff;
       background-color: #ea4c89;
-      padding: 11px 16px;
+      padding: 10px 16px;
+      height: 40px;
       border-radius: 8px;
-      font-size: 15px;
+      font-size: 14px;
+      line-height: 20px;
       margin-left: 18px;
-      transition: background-color 100ms ease;
-      display: none; }
+      transition: background-color 200ms ease;
+      display: none;
+      border: none;
+      outline: none;
+      text-align: center; }
       @media (min-width: 57.5em) {
         .header__sign-in-div--sign-up {
           display: inline-block; } }
@@ -575,7 +582,7 @@ h6 {
     margin: 0;
     padding: 0;
     border: 0;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -703,7 +710,8 @@ h6 {
     line-height: 20px;
     position: absolute;
     right: 24px;
-    bottom: 24px; }
+    bottom: 24px;
+    z-index: 2; }
     .video-section__at-link a {
       transition: all 0.2s ease-in-out;
       opacity: 0.7;
@@ -723,14 +731,16 @@ h6 {
     bottom: 0;
     align-items: center;
     filter: brightness(0.3);
-    justify-content: center; }
+    justify-content: center;
+    z-index: 1; }
     .video-section__video--video-tag {
       opacity: 1;
       position: absolute;
       height: 100vh;
       max-width: none;
       transition: all 0.8 ease-in-out;
-      font-size: 100%; }
+      font-size: 100%;
+      object-fit: contain; }
       @media (min-width: 48em) {
         .video-section__video--video-tag {
           width: 100vw;

@@ -608,18 +608,25 @@
 
     // header sign up link button
     &--sign-up {
+      position: relative;
+      box-sizing: border-box;
       text-decoration: none;
       color: $header-sign-in-text-search-icon-color;
       font-weight: 400;
       font-family: inherit;
       color: $white--color;
       background-color: $sign-up--button--color;
-      padding: 11px 16px;
+      padding: 10px 16px;
+      height: 40px;
       border-radius: 8px;
-      font-size: 15px;
+      font-size: 14px;
+      line-height: 20px;
       margin-left: 18px;
-      transition: background-color 100ms ease;
+      transition: background-color 200ms ease;
       display: none;
+      border: none;
+      outline: none;
+      text-align: center;
 
       @include medium-920 {
         display: inline-block;
