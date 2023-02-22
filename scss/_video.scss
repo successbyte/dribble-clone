@@ -44,6 +44,19 @@
       scroll-behavior: smooth;
       list-style: none;
 
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      & {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+      }
+
       li {
         display: inline-block;
         margin: 0;
@@ -286,10 +299,9 @@
       opacity: 1;
       position: absolute;
       height: 100vh;
+      max-width: none;
       transition: all 0.8 ease-in-out;
-      object-fit: contain;
-      overflow-clip-margin: content-box;
-      overflow: clip;
+      font-size: 100%;
 
       @include small-768 {
         width: 100vw;

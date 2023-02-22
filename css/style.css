@@ -531,7 +531,16 @@ h6 {
       list-style: none;
       font-weight: 400;
       scroll-behavior: smooth;
-      list-style: none; }
+      list-style: none;
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      /* Hide scrollbar for IE, Edge and Firefox */ }
+      .video-section__filter-buttons--list::-webkit-scrollbar {
+        display: none; }
+      .video-section__filter-buttons--list {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */ }
       .video-section__filter-buttons--list li {
         display: inline-block;
         margin: 0;
@@ -718,10 +727,9 @@ h6 {
       opacity: 1;
       position: absolute;
       height: 100vh;
+      max-width: none;
       transition: all 0.8 ease-in-out;
-      object-fit: contain;
-      overflow-clip-margin: content-box;
-      overflow: clip; }
+      font-size: 100%; }
       @media (min-width: 48em) {
         .video-section__video--video-tag {
           width: 100vw;
