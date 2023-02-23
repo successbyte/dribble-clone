@@ -345,7 +345,8 @@ h6 {
                 margin: 0;
                 text-decoration: none;
                 color: #6e6d7a;
-                font-weight: 400; }
+                font-weight: 400;
+                line-height: 20px; }
               .header__dribbble-div--links--parent .inspiration__div .inspiration__div--right--links:hover a {
                 color: #0d0c22; }
         .header__dribbble-div--links--parent .find-work__div {
@@ -745,3 +746,24 @@ h6 {
         .video-section__video--video-tag {
           width: 100vw;
           height: auto; } }
+
+.filter-nav {
+  position: relative;
+  padding-top: 16px;
+  background: #ffffff;
+  padding-right: 20px;
+  padding-left: 20px; }
+  @media (min-width: 48em) {
+    .filter-nav {
+      padding-right: 32px;
+      padding-left: 32px; } }
+  .filter-nav__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    line-height: 28px;
+    font-weight: 400; }
+    @media (max-width: 59.9375em) {
+      .filter-nav__inner {
+        flex-wrap: wrap; } }

@@ -1,0 +1,28 @@
+@import "variables";
+@import "media";
+
+.filter-nav {
+  position: relative;
+  padding-top: 16px;
+  background: $white--color;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @include small-768 {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    line-height: 28px;
+    font-weight: 400;
+
+    @include medium-959 {
+      flex-wrap: wrap;
+    }
+  }
+}
