@@ -767,3 +767,57 @@ h6 {
     @media (max-width: 59.9375em) {
       .filter-nav__inner {
         flex-wrap: wrap; } }
+    .filter-nav__inner--popular {
+      margin-right: 40px; }
+      @media (max-width: 59.9375em) {
+        .filter-nav__inner--popular {
+          margin-right: 15px; } }
+      .filter-nav__inner--popular--dropdown {
+        z-index: 3;
+        display: inline-block;
+        position: relative;
+        white-space: nowrap; }
+        .filter-nav__inner--popular--dropdown .dropdown-link {
+          font-size: 14px;
+          line-height: 20px;
+          transition: color 200ms ease;
+          color: #6e6d7a;
+          background-color: transparent;
+          box-shadow: 0px 0px 0px 1px #e7e7e9 inset;
+          min-width: 115px;
+          white-space: nowrap;
+          box-sizing: border-box;
+          text-align: left;
+          height: 40px;
+          padding: 10px 16px;
+          padding-right: 35px;
+          border: none;
+          border-radius: 8px;
+          outline: none;
+          text-decoration: none;
+          cursor: pointer;
+          appearance: none;
+          margin: 0;
+          display: inline-block;
+          position: relative; }
+          .filter-nav__inner--popular--dropdown .dropdown-link .btn-dropdown-popular {
+            fill: #9e9ea7;
+            position: absolute;
+            top: 43%;
+            right: 15px;
+            width: 10px;
+            height: 10px;
+            margin: 0;
+            display: block;
+            max-width: 100%;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px; }
+          .filter-nav__inner--popular--dropdown .dropdown-link .popular-text {
+            font-weight: 400;
+            line-height: 20px;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            color: #6e6d7a;
+            font-size: 14px; }
