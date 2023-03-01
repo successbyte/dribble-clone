@@ -3,16 +3,19 @@
 
 .filter-nav {
   position: relative;
-  padding-top: 16px;
   background: $white--color;
   padding-right: 20px;
   padding-left: 20px;
+  padding-top: 32px;
 
   @include small-768 {
     padding-right: 32px;
     padding-left: 32px;
   }
 
+  @include medium-959 {
+    padding-top: 16px;
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -64,10 +67,18 @@
           display: inline-block;
           position: relative;
 
+          transition: color 200ms ease;
+
+          &:hover {
+            border-color: #ea4c8966;
+            -webkit-box-shadow: 0 0 0 4px #ea4c891a;
+            box-shadow: 0 0 0 4px #ea4c891a;
+          }
+
           .btn-dropdown-popular {
             fill: $menu--sign-in--icons-and-header-links--color;
             position: absolute;
-            top: 43%;
+            top: 40%;
             right: 15px;
             width: 10px;
             height: 10px;
@@ -89,6 +100,57 @@
             border: 0;
             color: #6e6d7a;
             font-size: 14px;
+          }
+        }
+
+        .dropdown-link-filters {
+          padding: 0;
+          margin: 0;
+          box-shadow: 0px 0px 0px 1px #e7e7e9 inset;
+          color: #0d0c22;
+          display: inline-block;
+          white-space: nowrap;
+          position: relative;
+          box-sizing: border-box;
+          height: 40px;
+          padding: 10px 16px;
+          transition: color 200ms ease;
+          border: none;
+          border-radius: 8px;
+          outline: none;
+          text-align: center;
+          text-decoration: none;
+          cursor: pointer;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 20px;
+
+          &:hover {
+            box-shadow: 0px 0px 0px 1px #dbdbde inset;
+          }
+
+          .btn-dropdown-filters {
+            display: inline-block;
+            margin-left: 0;
+            margin-right: 4px;
+            width: 13px;
+            height: 13px;
+            margin-top: -3px;
+            fill: currentColor;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+          }
+
+          .filters-text {
+            order: 2;
+            display: inline-block;
+            font-weight: normal;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            color: currentColor;
+            font-size: 15px;
           }
         }
       }

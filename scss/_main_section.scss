@@ -1,0 +1,439 @@
+@import "variables";
+@import "media";
+
+.main {
+  width: 100%;
+  padding: 32px 0 40px 0;
+
+  @include medium-959 {
+    padding: 16px 0;
+  }
+
+  &__content {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 14px;
+
+    @include medium-959 {
+      width: auto;
+      float: none;
+    }
+
+    &--full {
+      max-width: none;
+      width: auto;
+      float: none;
+
+      @include medium-959 {
+        margin-bottom: 40px;
+      }
+
+      &--grid {
+        display: grid;
+        gap: 36px;
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+        list-style: none;
+        position: relative;
+        padding-right: 20px;
+        padding-left: 20px;
+
+        @include small-768 {
+          padding-right: 32px;
+          padding-left: 32px;
+        }
+
+        @include medium-1200 {
+          padding-right: 72px;
+          padding-left: 72px;
+        }
+
+        @include big-1600 {
+          grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
+        }
+
+        // main setup for items inside main section of app
+        &--item {
+          margin: 0;
+          padding: 0;
+          border: 0;
+          display: list-item;
+          list-style: none;
+
+          &:hover {
+            .item__top--top--icon {
+              .icon {
+                display: none;
+              }
+            }
+
+            .item__top--middle {
+              opacity: 1;
+            }
+
+            video {
+              display: block;
+              visibility: visible;
+            }
+          }
+
+          .item__top {
+            position: relative;
+            height: 0;
+            padding-bottom: 75%;
+            overflow: hidden;
+            border-radius: 8px;
+
+            .dribbble-video {
+              display: none;
+              visibility: hidden;
+
+              //   visibility: visible;
+              //   display: block;
+              position: absolute;
+              z-index: 1;
+              width: 100%;
+              height: 100%;
+              border-radius: 8px;
+              pointer-events: none;
+              object-fit: cover;
+            }
+
+            &:after {
+              content: "";
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              pointer-events: none;
+              background: linear-gradient(
+                to bottom,
+                transparent 0%,
+                transparent 8.1%,
+                rgba(0, 0, 0, 0.001) 15.5%,
+                rgba(0, 0, 0, 0.003) 22.5%,
+                rgba(0, 0, 0, 0.005) 29%,
+                rgba(0, 0, 0, 0.008) 35.3%,
+                rgba(0, 0, 0, 0.011) 41.2%,
+                rgba(0, 0, 0, 0.014) 47.1%,
+                rgba(0, 0, 0, 0.016) 52.9%,
+                rgba(0, 0, 0, 0.019) 58.8%,
+                rgba(0, 0, 0, 0.022) 64.7%,
+                rgba(0, 0, 0, 0.025) 71%,
+                rgba(0, 0, 0, 0.027) 77.5%,
+                rgba(0, 0, 0, 0.029) 84.5%,
+                rgba(0, 0, 0, 0.03) 91.9%,
+                rgba(0, 0, 0, 0.03) 100%
+              );
+            }
+
+            &--figure {
+              margin: 0;
+              overflow: hidden;
+              z-index: 2;
+              //   display: none;
+
+              &:before {
+                content: "";
+                display: block;
+                padding-top: 75%;
+              }
+
+              & > * {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+              }
+
+              .lazyloaded {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                margin: 0;
+                padding: 0;
+                border: 0;
+              }
+            }
+
+            &--top {
+              display: flex;
+              position: absolute;
+              top: 0;
+              right: 0;
+              left: 0;
+              align-items: center;
+              justify-content: flex-end;
+              height: 40px;
+              padding: 0 12px;
+
+              &--icon {
+                transform: translateY(-1px);
+                display: flex;
+                align-items: center;
+                margin-left: 12px;
+                opacity: 1;
+                color: $white--color;
+
+                .icon {
+                  width: 16px;
+                  height: 16px;
+                  overflow: visible;
+                  stroke: rgba(0, 0, 0, 0.2);
+                }
+              }
+            }
+
+            &--middle {
+              display: flex;
+              z-index: 2;
+              align-items: flex-end;
+              padding: 20px;
+              transition: opacity 300ms ease;
+              border-radius: 8px;
+              opacity: 0;
+              background: linear-gradient(
+                180deg,
+                transparent 62%,
+                rgba(0, 0, 0, 0.00345888) 63.94%,
+                rgba(0, 0, 0, 0.014204) 65.89%,
+                rgba(0, 0, 0, 0.0326639) 67.83%,
+                rgba(0, 0, 0, 0.0589645) 69.78%,
+                rgba(0, 0, 0, 0.0927099) 71.72%,
+                rgba(0, 0, 0, 0.132754) 73.67%,
+                rgba(0, 0, 0, 0.177076) 75.61%,
+                rgba(0, 0, 0, 0.222924) 77.56%,
+                rgba(0, 0, 0, 0.267246) 79.5%,
+                rgba(0, 0, 0, 0.30729) 81.44%,
+                rgba(0, 0, 0, 0.341035) 83.39%,
+                rgba(0, 0, 0, 0.367336) 85.33%,
+                rgba(0, 0, 0, 0.385796) 87.28%,
+                rgba(0, 0, 0, 0.396541) 89.22%,
+                rgba(0, 0, 0, 0.4) 91.17%
+              );
+              content: "";
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              pointer-events: none;
+
+              &--info {
+                display: flex;
+                flex: 1;
+                align-items: center;
+                justify-content: space-between;
+                min-width: 0;
+
+                .project-title {
+                  color: $white--color;
+                  font-size: 16px;
+                  font-weight: 500;
+                  line-height: 22px;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                }
+                .two-icons {
+                  display: flex;
+                  flex: 1;
+                  justify-content: flex-end;
+                  list-style: none;
+                  margin: 0;
+                  padding: 0;
+                  border: 0;
+
+                  &__list {
+                    margin-left: 12px;
+                    padding: 0;
+                    border: 0;
+                    list-style: none;
+
+                    &__link {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      width: 34px;
+                      height: 34px;
+                      padding: 0;
+                      color: $header-sign-in-text-search-icon-color;
+                      pointer-events: auto;
+                      background: $search-bar--color;
+                      position: relative;
+                      box-sizing: border-box;
+                      transition: color 200ms ease;
+                      border: none;
+                      border-radius: 8px;
+                      outline: none;
+                      text-align: center;
+                      text-decoration: none;
+                      cursor: pointer;
+                      appearance: none;
+                      font-size: 14px;
+                      font-weight: 500;
+                      line-height: 20px;
+
+                      &:hover {
+                        //   background: $video-bottom-buttons--border--color;
+                        background: #e3e3e6;
+                      }
+
+                      svg {
+                        width: 16px;
+                        height: 16px;
+                        margin: 0;
+                        fill: currentColor;
+                        vertical-align: middle;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .item__bottom {
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 8px;
+
+            &--left {
+              display: flex;
+              align-items: center;
+              min-width: 0;
+
+              &--detail {
+                display: flex;
+                align-items: center;
+                min-width: 0;
+                text-decoration: none;
+
+                img {
+                  width: 24px;
+                  height: 24px;
+                  overflow: hidden;
+                  border-radius: 50%;
+                  margin: 0;
+                  padding: 0;
+                }
+
+                .display-name {
+                  padding: 0;
+                  font-size: 14px;
+                  font-weight: 500;
+                  line-height: 20px;
+                  overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  flex: 1;
+                  margin-left: 8px;
+                  color: $drible-icon-and--header-links-hover--color;
+                  text-decoration: none;
+                }
+              }
+
+              &--team {
+                display: flex;
+                margin: 0;
+                padding: 0;
+                margin-left: 8px;
+                text-decoration: none;
+
+                &:hover .team-pro {
+                  background-color: #ea4c89;
+                }
+
+                .team-pro {
+                  margin: 0;
+                  padding: 2px 3px;
+                  border-radius: 3px;
+                  background-color: $team-pro-background-color;
+                  color: $white--color;
+                  font-size: 10px;
+                  font-weight: bold;
+                  line-height: 1;
+                  text-transform: uppercase;
+                }
+              }
+            }
+
+            &--right {
+              display: flex;
+              flex: 1;
+              justify-content: flex-end;
+              color: $menu--sign-in--icons-and-header-links--color;
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 16px;
+
+              &--love {
+                display: inline-flex;
+                align-items: center;
+                margin-left: 8px;
+
+                .love {
+                  &__link {
+                    display: flex;
+                    text-decoration: none;
+                    margin: 0;
+                    padding: 0;
+
+                    .love-icon {
+                      width: 14px;
+                      height: 14px;
+                      margin-right: 4px;
+                      transition: color 200ms ease;
+                      color: $menu--sign-in--icons-and-header-links--color;
+                      fill: currentColor;
+
+                      &:hover {
+                        color: #ea4c89;
+                      }
+                    }
+                  }
+                }
+                .loves-count {
+                  color: #3d3d4e;
+                  font-weight: 500;
+                  line-height: 16px;
+                }
+              }
+
+              &--view {
+                display: flex;
+                align-items: center;
+                margin-left: 8px;
+
+                .view-icon {
+                  width: 14px;
+                  height: 14px;
+                  margin-right: 4px;
+                  transition: color 200ms ease;
+                  color: $menu--sign-in--icons-and-header-links--color;
+                  fill: currentColor;
+                  font-weight: 400;
+                  line-height: 16px;
+
+                  &:hover {
+                    color: #ea4c89;
+                  }
+                }
+
+                .views-count {
+                  color: #3d3d4e;
+                  font-weight: 500;
+                  line-height: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
