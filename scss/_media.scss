@@ -1,3 +1,9 @@
+@mixin small-500 {
+  @media (min-width: 31.25em) {
+    @content;
+  }
+}
+
 @mixin small-768 {
   @media (min-width: 48em) {
     @content;

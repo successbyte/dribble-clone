@@ -1168,3 +1168,74 @@ h6 {
                   color: #3d3d4e;
                   font-weight: 500;
                   line-height: 16px; }
+      .main__content--full--login {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px; }
+        @media (min-width: 31.25em) {
+          .main__content--full--login {
+            display: block; } }
+        @media (min-width: 48em) {
+          .main__content--full--login {
+            padding-left: 32px;
+            padding-right: 32px; } }
+        @media (min-width: 75em) {
+          .main__content--full--login {
+            padding-left: 72px;
+            padding-right: 72px; } }
+        .main__content--full--login--signup {
+          max-width: 400px;
+          margin: 0 auto;
+          margin-top: 15px;
+          padding-left: 60px;
+          padding-right: 60px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          color: #ffffff;
+          display: inline-block;
+          position: relative;
+          height: 40px;
+          transition: color 200ms ease;
+          border: none;
+          border-radius: 8px;
+          outline: none;
+          background: #ea4c89;
+          text-align: center;
+          text-decoration: none;
+          cursor: pointer;
+          appearance: none;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 20px; }
+          .main__content--full--login--signup:hover {
+            background: #ec82ac; }
+        .main__content--full--login--signin {
+          margin: 0 auto;
+          margin-top: 15px;
+          padding: 0;
+          padding-left: 60px;
+          padding-right: 60px;
+          transition: color 200ms ease;
+          color: #ea4c89;
+          text-decoration: none;
+          text-align: center; }
+          .main__content--full--login--signin:hover {
+            color: #ec82ac; }
+      .main__content--full--back-to-top {
+        display: block;
+        position: fixed;
+        z-index: 5;
+        right: 20px;
+        bottom: 15px; }
+        .main__content--full--back-to-top a {
+          opacity: 0.37;
+          margin: 0;
+          padding: 0;
+          text-decoration: none; }
+          .main__content--full--back-to-top a img {
+            width: 50px;
+            height: 50px;
+            border: none; }
