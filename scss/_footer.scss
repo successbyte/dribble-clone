@@ -33,7 +33,7 @@
       padding: 48px 0 32px;
       border-bottom: 1px solid $header-background-color;
 
-      @include big-1600 {
+      @include medium-1160 {
         flex-direction: row;
         padding: 72px 0;
       }
@@ -97,6 +97,7 @@
 
       .right-links {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
 
         @include small-768 {

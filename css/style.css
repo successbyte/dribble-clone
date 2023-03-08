@@ -1266,7 +1266,7 @@ h6 {
       flex-direction: column;
       padding: 48px 0 32px;
       border-bottom: 1px solid #e7e7e9; }
-      @media (min-width: 100em) {
+      @media (min-width: 72.5em) {
         .footer__center-larg--main-content {
           flex-direction: row;
           padding: 72px 0; } }
@@ -1309,6 +1309,7 @@ h6 {
           color: #0d0c22; }
       .footer__center-larg--main-content .right-links {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap; }
         @media (min-width: 48em) {
           .footer__center-larg--main-content .right-links {
