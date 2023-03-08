@@ -22,6 +22,12 @@
   }
 }
 
+@mixin medium-1160 {
+  @media (min-width: 72.5em) {
+    @content;
+  }
+}
+
 @mixin medium-1200 {
   @media (min-width: 75em) {
     @content;

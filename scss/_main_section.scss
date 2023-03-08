@@ -1,6 +1,7 @@
 @import "variables";
 @import "media";
 
+// main content section
 .main {
   width: 100%;
   padding: 32px 0 40px 0;
@@ -9,6 +10,7 @@
     padding: 16px 0;
   }
 
+  //   content parent
   &__content {
     position: relative;
     margin: 0 auto;
@@ -29,6 +31,7 @@
         margin-bottom: 40px;
       }
 
+      //   contents parent with display of grid
       &--grid {
         display: grid;
         gap: 36px;
@@ -60,6 +63,7 @@
           display: list-item;
           list-style: none;
 
+          //   icons on top right of contents when hover
           &:hover {
             .item__top--top--icon {
               .icon {
@@ -67,6 +71,7 @@
               }
             }
 
+            // text and two icons on top of contente
             .item__top--middle {
               opacity: 1;
             }
@@ -80,6 +85,7 @@
             border-radius: 8px;
 
             &:hover {
+              // display the video when hover its content
               .item__top--video {
                 display: block !important;
                 visibility: visible !important;
@@ -115,9 +121,8 @@
               );
             }
 
+            // video behind the contents predefined display none
             &--video {
-              //   display: block !important;
-              //   visibility: visible !important;
               position: absolute;
               z-index: 2;
               width: 100%;
@@ -127,11 +132,11 @@
               object-fit: cover;
             }
 
+            // picture of contents
             &--figure {
               margin: 0;
               overflow: hidden;
               z-index: 1;
-              //   display: none;
 
               &:before {
                 content: "";
@@ -157,6 +162,7 @@
               }
             }
 
+            // contents top right icons setup
             &--top {
               display: flex;
               position: absolute;
@@ -176,6 +182,7 @@
                 opacity: 1;
                 color: $white--color;
 
+                //   contents top right icon
                 .icon {
                   width: 16px;
                   height: 16px;
@@ -185,6 +192,7 @@
               }
             }
 
+            // contents top two icons and content name
             &--middle {
               display: flex;
               z-index: 2;
@@ -236,6 +244,8 @@
                   text-overflow: ellipsis;
                   white-space: nowrap;
                 }
+
+                // two icons on top of every content item
                 .two-icons {
                   display: flex;
                   flex: 1;
@@ -276,7 +286,6 @@
                       line-height: 20px;
 
                       &:hover {
-                        //   background: $video-bottom-buttons--border--color;
                         background: #e3e3e6;
                       }
 
@@ -294,6 +303,10 @@
             }
           }
 
+          //   every contents bottom section
+          // logo of company
+          // company name
+          // views and likes of content
           .item__bottom {
             display: flex;
             position: relative;
@@ -312,6 +325,7 @@
                 min-width: 0;
                 text-decoration: none;
 
+                // company logo
                 img {
                   width: 24px;
                   height: 24px;
@@ -321,6 +335,7 @@
                   padding: 0;
                 }
 
+                // cpmpany name
                 .display-name {
                   padding: 0;
                   font-size: 14px;
@@ -336,6 +351,7 @@
                 }
               }
 
+              //   TEAM and PRO text
               &--team {
                 display: flex;
                 margin: 0;
@@ -361,6 +377,7 @@
               }
             }
 
+            // views and likes section
             &--right {
               display: flex;
               flex: 1;
@@ -370,6 +387,7 @@
               font-weight: 400;
               line-height: 16px;
 
+              //   likes or loves
               &--love {
                 display: inline-flex;
                 align-items: center;
@@ -382,6 +400,7 @@
                     margin: 0;
                     padding: 0;
 
+                    // love icon
                     .love-icon {
                       width: 14px;
                       height: 14px;
@@ -403,11 +422,13 @@
                 }
               }
 
+              //   view section
               &--view {
                 display: flex;
                 align-items: center;
                 margin-left: 8px;
 
+                // view icon
                 .view-icon {
                   width: 14px;
                   height: 14px;
@@ -434,6 +455,7 @@
         }
       }
 
+      //   signin and signup section
       &--login {
         display: flex;
         flex-direction: column;
@@ -456,6 +478,7 @@
           padding-right: 72px;
         }
 
+        // signup botton
         &--signup {
           max-width: 400px;
           margin: 0 auto;
@@ -486,6 +509,7 @@
           }
         }
 
+        // sign in link
         &--signin {
           margin: 0 auto;
           margin-top: 15px;
@@ -503,6 +527,7 @@
         }
       }
 
+      //   back to top to the right bottom of page
       &--back-to-top {
         display: block;
         position: fixed;

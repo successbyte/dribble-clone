@@ -1,0 +1,155 @@
+@import "variables";
+@import "media";
+
+.footer {
+  background: $footer-background-color;
+  color: $footer-text-color;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+
+  &__center-larg {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include small-768 {
+      max-width: 1680px;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    @include medium-1200 {
+      padding-left: 72px;
+      padding-right: 72px;
+    }
+
+    &--main-content {
+      display: flex;
+      flex-direction: column;
+      padding: 48px 0 32px;
+      border-bottom: 1px solid $header-background-color;
+
+      @include big-1600 {
+        flex-direction: row;
+        padding: 72px 0;
+      }
+
+      .left {
+        a {
+          text-decoration: none;
+          margin: 0;
+          padding: 0;
+
+          .dribbble-wordmark {
+            transition: fill 200ms ease;
+            fill: $sign-up--button--color;
+            width: 104px;
+            height: 26px;
+
+            &:hover {
+              fill: $dribbble-svg-hover-color;
+            }
+          }
+
+          .accessibility-text {
+            position: absolute;
+            width: 0;
+            overflow: hidden;
+            opacity: 0;
+          }
+        }
+
+        &__explain-text {
+          max-width: 256px;
+          margin: 20px 0;
+          font-size: 100%;
+        }
+
+        &__social-icons-container {
+          &--link {
+            color: $footer-text-color;
+            transition: color 200ms ease;
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+            font-weight: 400;
+            line-height: 20px;
+
+            svg {
+              max-width: 18px;
+              max-height: 18px;
+              margin-top: 8px;
+              margin-right: 14px;
+              fill: currentColor;
+              //   color: $footer-text-color;
+              display: inline;
+            }
+            &:hover {
+              color: $video--button--hover-color;
+            }
+          }
+        }
+      }
+
+      .right-links {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include small-768 {
+          flex-wrap: nowrap;
+        }
+
+        &__column {
+          line-height: 20px;
+          font-weight: 400;
+          color: $footer-text-color;
+          width: 50%;
+
+          @include medium-1160 {
+            width: 144px;
+            margin-left: 40px;
+            margin-right: 0;
+          }
+
+          @include big-1600 {
+            margin-left: 128px;
+          }
+
+          &:first-child {
+            margin-left: 60px;
+          }
+
+          .link-heading {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            color: $video--button--hover-color;
+
+            @include medium-1160 {
+              margin-top: 0;
+            }
+          }
+
+          .link {
+            display: block;
+            margin-top: 16px;
+            color: $footer-text-color;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            text-decoration: none;
+            transition: color 200ms ease;
+
+            &:hover {
+              color: $video--button--hover-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
