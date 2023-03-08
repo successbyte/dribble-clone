@@ -1326,14 +1326,19 @@ h6 {
               margin-right: 0; } }
           @media (min-width: 100em) {
             .footer__center-larg--main-content .right-links__column {
+              margin-left: 72px; } }
+          @media (min-width: 72.5em) {
+            .footer__center-larg--main-content .right-links__column:first-child {
+              margin-left: 60px; } }
+          @media (min-width: 100em) {
+            .footer__center-larg--main-content .right-links__column:first-child {
               margin-left: 128px; } }
-          .footer__center-larg--main-content .right-links__column:first-child {
-            margin-left: 60px; }
           .footer__center-larg--main-content .right-links__column .link-heading {
             font-size: 14px;
             font-weight: 500;
             line-height: 20px;
-            color: #0d0c22; }
+            color: #0d0c22;
+            margin-top: 32px; }
             @media (min-width: 72.5em) {
               .footer__center-larg--main-content .right-links__column .link-heading {
                 margin-top: 0; } }
@@ -1348,3 +1353,38 @@ h6 {
             transition: color 200ms ease; }
             .footer__center-larg--main-content .right-links__column .link:hover {
               color: #0d0c22; }
+    .footer__center-larg--bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 32px 0;
+      color: #6e6d7a; }
+      @media (min-width: 72.5em) {
+        .footer__center-larg--bottom {
+          flex-direction: row;
+          padding: 44px 0; } }
+      .footer__center-larg--bottom .dribbble-shots {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center; }
+        @media (min-width: 72.5em) {
+          .footer__center-larg--bottom .dribbble-shots {
+            flex-direction: row; } }
+        .footer__center-larg--bottom .dribbble-shots__count {
+          margin: 0;
+          padding: 0;
+          color: #0d0c22;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 20px; }
+        .footer__center-larg--bottom .dribbble-shots .dribbble-ball {
+          width: 24px;
+          height: 24px;
+          margin-top: 8px;
+          margin-bottom: 8px; }
+          @media (min-width: 72.5em) {
+            .footer__center-larg--bottom .dribbble-shots .dribbble-ball {
+              margin-top: 0;
+              margin-bottom: 0;
+              margin-left: 8px; } }
