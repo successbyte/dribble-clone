@@ -1340,11 +1340,11 @@ h6 {
             color: #0d0c22;
             margin-top: 32px; }
             @media (min-width: 72.5em) {
-              .footer__center-larg--main-content .right-links__column .link-heading:not(:first-child) {
-                margin-top: 24px; } }
-            @media (min-width: 72.5em) {
               .footer__center-larg--main-content .right-links__column .link-heading {
                 margin-top: 0px; } }
+            @media (min-width: 72.5em) {
+              .footer__center-larg--main-content .right-links__column .link-heading:not(:first-child) {
+                margin-top: 24px; } }
           .footer__center-larg--main-content .right-links__column .link {
             display: block;
             margin-top: 16px;

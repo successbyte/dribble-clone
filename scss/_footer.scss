@@ -130,6 +130,7 @@
             }
           }
 
+          //   link headings in footer
           .link-heading {
             font-size: 14px;
             font-weight: 500;
@@ -137,14 +138,14 @@
             color: $video--button--hover-color;
             margin-top: 32px;
 
+            @include medium-1160 {
+              margin-top: 0px;
+            }
+
             &:not(:first-child) {
               @include medium-1160 {
                 margin-top: 24px;
               }
-            }
-
-            @include medium-1160 {
-              margin-top: 0px;
             }
           }
 
