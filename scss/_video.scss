@@ -1,4 +1,5 @@
 @import "variables";
+// video section starts here
 .video-section {
   height: 650px;
   width: 100%;
@@ -16,6 +17,7 @@
     height: 560px;
   }
 
+  // filter buttons at top of video section
   &__filter-buttons {
     z-index: 2;
     margin-top: 0;
@@ -74,10 +76,6 @@
             font-size: 16px;
             font-weight: 500;
           }
-
-          // @include medium-959 {
-          //   font-weight: 500;
-          // }
         }
         .first__white--button:first-of-type {
           background: $white--color;
@@ -94,6 +92,7 @@
     }
   }
 
+  // a brief explaination of dribbble
   &--middle-text {
     margin: 0;
     padding: 0;
@@ -139,6 +138,7 @@
     }
   }
 
+  // seachBar at middle of video section
   &__search {
     position: relative;
     z-index: 2;
@@ -197,6 +197,7 @@
     }
   }
 
+  // seach suggestion an bottom of video section
   &__search-suggestions {
     z-index: 2;
     width: 100%;
@@ -280,6 +281,7 @@
     }
   }
 
+  // video setup
   &__video {
     display: flex;
     position: absolute;
@@ -308,4 +310,5 @@
       }
     }
   }
+  // video section ends here
 }

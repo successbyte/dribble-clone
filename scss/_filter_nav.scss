@@ -1,6 +1,7 @@
 @import "variables";
 @import "media";
 
+// filter at bottom of video section starts here
 .filter-nav {
   position: relative;
   background: $white--color;
@@ -28,6 +29,7 @@
       flex-wrap: wrap;
     }
 
+    // popular dropdown setup
     &--popular {
       margin-right: 40px;
 
@@ -88,8 +90,6 @@
             font-size: 14px;
             font-weight: 400;
             line-height: 20px;
-            // transition: transform 0.2s ease-in-out;
-            // transform: rotate(180deg) translateY(50%);
           }
 
           .popular-text {
@@ -103,6 +103,7 @@
           }
         }
 
+        // filter button setup
         .dropdown-link-filters {
           padding: 0;
           margin: 0;
@@ -156,4 +157,5 @@
       }
     }
   }
+  // filter at bottom of video section ends here
 }

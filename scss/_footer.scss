@@ -1,6 +1,7 @@
 @import "variables";
 @import "media";
 
+// footer
 .footer {
   background: $footer-background-color;
   color: $footer-text-color;
@@ -38,6 +39,7 @@
         padding: 72px 0;
       }
 
+      // dribbble icon and social icons
       .left {
         a {
           text-decoration: none;
@@ -63,12 +65,14 @@
           }
         }
 
+        // dribbble explaination in footer
         &__explain-text {
           max-width: 256px;
           margin: 20px 0;
           font-size: 100%;
         }
 
+        // social icons
         &__social-icons-container {
           &--link {
             color: $footer-text-color;
@@ -85,7 +89,6 @@
               margin-top: 8px;
               margin-right: 14px;
               fill: currentColor;
-              //   color: $footer-text-color;
               display: inline;
             }
             &:hover {
@@ -95,6 +98,7 @@
         }
       }
 
+      //   footer links
       .right-links {
         display: flex;
         flex-direction: row;
@@ -130,7 +134,7 @@
             }
           }
 
-          //   link headings in footer
+          //   link headings in footer links
           .link-heading {
             font-size: 14px;
             font-weight: 500;
@@ -167,6 +171,7 @@
       }
     }
 
+    // bottom side of footer
     &--bottom {
       display: flex;
       flex-direction: column;
@@ -198,6 +203,7 @@
           line-height: 20px;
         }
 
+        // little nice red ball at bottom of footer
         .dribbble-ball {
           width: 24px;
           height: 24px;
@@ -213,4 +219,5 @@
       }
     }
   }
+  //   footer ends
 }
