@@ -501,10 +501,34 @@ h6 {
       margin-right: 23px;
       margin-bottom: -4px;
       cursor: pointer;
-      display: none; }
+      display: none;
+      transition: 
+    fill 0.4s ease, 
+    transform 0.4s ease, 
+    filter 0.4s ease, 
+    box-shadow 0.4s ease;
+    animation: gradient-pulse 3s infinite;
+       }
+       @keyframes gradient-pulse {
+        0% {
+          filter: brightness(1);
+        }
+        50% {
+          filter: brightness(1.5);
+        }
+        100% {
+          filter: brightness(1);
+        }
+      }
       @media (min-width: 57.5em) {
         .header__sign-in-div--svg {
-          display: inline-block; } }
+          display: inline-block; } 
+          .header__sign-in-div--svg:hover {
+            fill: #fa4c89; 
+            transform: rotate(360deg) scale(1.2); 
+            filter: brightness(1.3); 
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+          }}
 
 .video-section {
   height: 650px;
@@ -648,7 +672,8 @@ h6 {
         width: 100%;
         height: 40px;
         outline: none;
-        transition: background-color 200ms ease, outline 200ms ease, color 200ms ease, box-shadow 200ms ease, -webkit-box-shadow 200ms ease;
+        transition: background-color 200ms ease, outline 200ms ease,
+ color 200ms ease, box-shadow 200ms ease, -webkit-box-shadow 200ms ease;
         background-color: #f3f3f4;
         color: #0d0c22;
         appearance: none; }

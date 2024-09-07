@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "express": "^4.19.2",
     "node-sass": "^8.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build": "npm run build",
+    "test": "npm run test"
   }
 }
