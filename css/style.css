@@ -135,6 +135,8 @@ h6 {
       .header__dribbble-div {
         margin-left: 24px;
         margin-right: 0; } }
+    .header__dribbble-div--svg {
+      transition: all .2s ease-in-out; }
     .header__dribbble-div--svg:hover {
       cursor: pointer; }
       @media (min-width: 57.5em) {
