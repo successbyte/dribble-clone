@@ -8,7 +8,7 @@ https://dribble-clone-ehsan.vercel.app/
 
 - fork the repo
 - clone the forked repo to your machine 
-- `npm install`
+- `npm install -g node-sass`
 - to run the node-sass: `node-sass scss/main.scss css/style.css -w`
 - if you change the scss filed in scss folder the css/styles.css will change automatically
 
