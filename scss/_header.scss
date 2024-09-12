@@ -606,7 +606,10 @@
       text-decoration: none;
       color: $header-sign-in-text-search-icon-color;
       font-weight: 400;
-
+      transition: color 200ms ease-in-out;
+    &:hover{
+      color: #ea4c89
+      }
       @include medium-920 {
         margin-right: 3px;
       }
