@@ -588,6 +588,10 @@ h6 {
   text-decoration: none;
   color: #6e6d7a;
   font-weight: 400;
+  transition: color 200ms ease-in-out;
+}
+.header__sign-in-div--sign-in:hover {
+  color: #ea4c89;
 }
 @media (min-width: 57.5em) {
   .header__sign-in-div--sign-in {
