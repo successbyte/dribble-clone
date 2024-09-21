@@ -1,5 +1,8 @@
 # Dribbble-clone
 
+The place to start your first Open Source Contribute, Easily create new issues ex: Change a button hover color. 
+And also go to issues and comment if want to be assigned to you.
+
 ## Live host
 
 https://dribble-clone-ehsan.vercel.app/
