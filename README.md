@@ -1,6 +1,6 @@
 # Dribbble-clone
 
-The place to start your first Open Source Contribute, Easily create new issues ex: Change a button hover color. 
+The place to start your first Open Source Contribute, Easily create new issues ex: Change a button hover color/there is a typoo in the Readme.md file. 
 And also go to issues and comment if want to be assigned to you.
 
 ## Live host
