@@ -87,13 +87,13 @@ h6 {
 
 ::-moz-selection {
   /* Code for Firefox */
-  color: #f9e3ee;
-  background: #e84c89;
+  color: #e0e0e0;
+  background: rgba(39, 130, 179, 0.5098039216);
 }
 
 ::selection {
-  color: #f9e3ee;
-  background: #e84c89;
+  color: #e0e0e0;
+  background: rgba(39, 130, 179, 0.5098039216);
 }
 
 /* CSS Reset Ends */
