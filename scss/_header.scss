@@ -68,10 +68,16 @@
       transition: all .2s ease-in-out;
     }
 
+    &--svg {
+      transition: all 0.2s ease-in-out;
+      fill: #350716; // Default color (e.g., pink)
+    }
+
     // dribbble svg hover section
     &--svg:hover {
       cursor: pointer;
       @include medium-920 {
+        fill: #f92e0a;
         opacity: 0.8;
       }
     }
