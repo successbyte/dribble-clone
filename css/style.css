@@ -1436,6 +1436,7 @@ h6 {
 }
 .main__content--full--grid--item .item__bottom--right--view .view-icon:hover {
   color: #ea4c89;
+  cursor: pointer;
 }
 .main__content--full--grid--item .item__bottom--right--view .views-count {
   color: #3d3d4e;
