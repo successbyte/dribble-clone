@@ -302,6 +302,7 @@
               }
             }
           }
+          
 
           //   every contents bottom section
           // logo of company
@@ -313,11 +314,17 @@
             align-items: center;
             justify-content: space-between;
             margin-top: 8px;
+           
+            align-items: center; /* Center items vertically */
+        }
+        
 
             &--left {
               display: flex;
               align-items: center;
-              min-width: 0;
+              min-width: 20;
+              word-wrap: break-word; 
+              text-overflow: ellipsis;
 
               &--detail {
                 display: flex;
@@ -376,6 +383,7 @@
                 }
               }
             }
+            
 
             // views and likes section
             &--right {
