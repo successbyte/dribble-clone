@@ -162,7 +162,7 @@ h6 {
 }
 @media (min-width: 57.5em) {
   .header__dribbble-div--svg:hover {
-    opacity: 0.8;
+    opacity: 0.6;
   }
 }
 .header__dribbble-div--links {
@@ -636,18 +636,6 @@ h6 {
   cursor: pointer;
   display: none;
   transition: fill 0.4s ease, transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
-  animation: gradient-pulse 3s infinite;
-}
-@keyframes gradient-pulse {
-  0% {
-    filter: brightness(1);
-  }
-  50% {
-    filter: brightness(1.5);
-  }
-  100% {
-    filter: brightness(1);
-  }
 }
 @media (min-width: 57.5em) {
   .header__sign-in-div--svg {

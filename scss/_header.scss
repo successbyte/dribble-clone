@@ -660,18 +660,7 @@
     transform 0.4s ease, 
     filter 0.4s ease, 
     box-shadow 0.4s ease;
-    animation: gradient-pulse 3s infinite;
-    @keyframes gradient-pulse {
-      0% {
-        filter: brightness(1);
-      }
-      50% {
-        filter: brightness(1.5);
-      }
-      100% {
-        filter: brightness(1);
-      }
-    }
+    
       @include medium-920 {
         display: inline-block;
       }
